@@ -6,9 +6,30 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  api:
-    handler: index.handler
+  list:
+    handler: index.list
     events:
       - httpApi:
-          path: /
+          path: /list
           method: get
+  get:
+    handler: index.get
+    events:
+      - httpApi:
+          path: /get
+          method: get
+  http:
+    handler: index.get
+    events:
+      - http:
+          path: /http
+          method: get
+  post:
+    handler: index.post
+    events:
+      - httpApi:
+          path: /post
+          method: post
+
+plugins:
+  - serverless-plugin-typescript

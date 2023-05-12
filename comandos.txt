@@ -1,2 +1,13 @@
 1° npm i serverless -g
-2° utilizar o comando -> serverless
+2° serverless
+3° cd serverless-api
+4° serverless deploy
+5° npm install -D serverless-plugin-typescript typescript
+6° serverless package
+7° npm i --save @types/aws-lambda
+
+aws sts get-caller-identity -> validar as credenciais da AWS
+
+codigo -> stack -> cloudFormation -> s3 -> lambda functions -> processo de deploy de uma lambda function
+
+OpenID Connect and Auth0 -> como autenticar a API
