@@ -9,8 +9,3 @@
 aws sts get-caller-identity -> validar as credenciais da AWS
 codigo -> stack -> cloudFormation -> s3 -> lambda functions -> processo de deploy de uma lambda function
 OpenID Connect and Auth0 -> como autenticar a API
-
-Utilizando NestJS
-1° nest new serverless-pg-nestjs
-2° cd serverless-pg-nestjs
-3° npm upgrade --latest
