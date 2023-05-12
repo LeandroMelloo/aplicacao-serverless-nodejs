@@ -4,6 +4,14 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  region: us-east-1
+  httpApi:
+    authorizers:
+      auth0:
+        identitySource: $request.header.Authorization
+        issuerUrl: https://dev-1xvpcqvgir4to7a2.us.auth0.com/
+        audience:
+          - serverless-api
 
 functions:
   list:
@@ -12,6 +20,8 @@ functions:
       - httpApi:
           path: /list
           method: get
+          authorizer:
+            name: auth0
   get:
     handler: index.get
     events:
