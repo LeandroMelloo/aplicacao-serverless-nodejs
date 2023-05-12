@@ -1,0 +1,2 @@
+1° npm i serverless -g
+2° utilizar o comando -> serverless
